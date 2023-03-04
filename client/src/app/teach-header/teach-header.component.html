@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <div class="navbar-nav">
+          <a class="nav-link" routerLink="/teacher/{{teacher}}">My Students</a>
+          <a class="nav-link" routerLink="/teacher/{{teacher}}/addUser">Add A User</a>
+          <a class="nav-link" routerLink="/teacher/{{teacher}}/movieSearch">Search/Rate A Movie</a>
+          <a class="nav-link" routerLink="/teacher/{{teacher}}/update">Update Info</a>
+          <a class="nav-link" routerLink="/teacher/{{teacher}}/reviews">My Reviews</a>
+        </div>
+        <a class="nav-link" id="logout" (click)="logout()">Logout</a>
+    </div>
+  </nav>

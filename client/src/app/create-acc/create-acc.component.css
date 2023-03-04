@@ -1,0 +1,18 @@
+div#test {
+    margin-top: 75px !important;
+}
+
+button {margin-bottom: 15px; width: 20vw; margin-top: 15px;}
+
+#goBack {
+    width: 10vw; 
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h5 {
+    text-align: center;
+}

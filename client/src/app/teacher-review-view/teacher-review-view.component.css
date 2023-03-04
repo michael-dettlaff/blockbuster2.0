@@ -1,0 +1,30 @@
+div.container {
+    margin-top: 75px;
+}
+
+#delete {
+    margin-top: 10px;
+    background-color: red;
+    border-color: red;
+    width: 20vw;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+span#rate::before {
+    margin-right: 10px;
+    content: 'Rating:';
+}
+
+span#rate {
+    margin-top: 15px;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 15px;
+}

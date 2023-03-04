@@ -1,0 +1,70 @@
+div.container {
+    margin-top: 75px;
+}
+
+input.grade-input {
+    width: 80px;
+    border-color: black !important ;
+    margin-left: 10px;
+}
+
+label {
+    padding-top: 20px;
+}
+
+
+textarea {
+    margin-top: 15px;
+}
+
+button {
+    margin-top: 15px;
+    width: 20vw;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+span.rating{
+    display: block;
+}
+
+span#rate::before {
+    margin-right: 10px;
+    content: 'Rating:';
+}
+
+span#rate {
+    margin-top: 15px;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+span#grade::before{
+    margin-right: 10px;
+    content: 'Grade:';
+}
+
+span#grade {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+span#feedback {
+    font-size: 1.15em;
+}
+
+span#feedback::before{
+    margin-right: 10px;
+    font-size: 1.05em;
+    content: 'Feedback:';
+    font-weight: 700;
+}
+
+p {
+    margin-top: 10px;
+}
+
+

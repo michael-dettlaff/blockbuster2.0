@@ -1,0 +1,57 @@
+<div id="test" class="col-md-6 offset-md-3 mt-4" style="margin-top: 75px;">
+
+    <h2>Ready to have some fun?</h2>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <!--
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email of the teacher's class you're joining</label>
+            <input type="email" name="teacherEmail" ngModel required #teacherEmail ="ngModel" 
+                    class="form-control" 
+                    id="login-teacher" 
+                    placeholder="Teacher's email">
+        </div>
+    -->
+        <h5>You'll be joining Mr. Dettlaff's class</h5>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Your First Name</label>
+            <input type="email" name="firstname" ngModel required #firstname ="ngModel" 
+                    class="form-control" 
+                    id="login-first" 
+                    placeholder="First Name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Your Last Name</label>
+            <input type="email" name="lastname" ngModel required #lastname ="ngModel" 
+                    class="form-control" 
+                    id="login-las" 
+                    placeholder="Last Name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Your Username</label>
+            <input type="email" name="username" ngModel required #username ="ngModel" 
+                class="form-control" 
+                id="login-user" 
+                placeholder="username">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Your Password</label>
+            <input type="password" name="password" ngModel required #password ="ngModel"
+                  class="form-control" 
+                  id="login-pass" 
+                  placeholder="password">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Confirm Your Password</label>
+            <input type="password" name="confirmPassword" ngModel required #confirmPassword ="ngModel"
+                  class="form-control" 
+                  id="login-confirm" 
+                  placeholder="password">
+        </div>
+        <div class="text-center mb-3">
+            <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Join</button> 
+        </div> 
+        <div class="text-center mb-3">
+            <a id="goBack" routerLink="/">Back To Login!</a>
+        </div> 
+    </form>
+</div>

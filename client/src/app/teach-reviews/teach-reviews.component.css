@@ -1,0 +1,75 @@
+div.review {
+    display: grid;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    padding: 5px;
+    border-style: solid;
+    border-color: black;
+    display: inline-block;
+    text-align: center;
+    margin-right: .5em;
+    margin-bottom: 1em;
+}
+
+div.reviews {
+    margin-top: 45px;
+}
+
+li:hover{
+    background-color: rgb(195, 203, 201);
+    cursor: pointer;
+}
+
+form {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+span#clear {
+    margin-left: 25px;
+}
+
+h6 {
+    margin-top: 5px;
+}
+
+label {
+    margin-right: 15px;
+    font-weight: 700;
+}
+
+select {
+    border-style: solid;
+    border-color: rgb(226, 226, 226); 
+    background-color: rgb(233, 233, 233);
+}
+
+input {
+    border-style: solid ;
+    border-color: black;
+    width: 20vw;
+}
+
+div.description span {
+    display: block;
+}
+
+.delete {
+    background-color: red;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 5px;
+    color: white;
+}
+
+.delete:hover {
+    font-size: 1.1em;
+}

@@ -1,0 +1,35 @@
+<app-student-header></app-student-header>
+
+<div class="container">
+    <h2>Welcome Back, {{studentName.user}}</h2>
+    <form id="filter" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <label>Filter the reviews based on one of the following: </label>
+      <select class="btn" name="filterSelect" [(ngModel)]="filterSelected" (ngModelChange)="onFilterSelected($event)">
+        <option value="Movie Rating">Movie Rating</option>
+        <option value="Review Grade">Review Grade</option>
+        <option value="Review Date">Review Date</option>
+        <option value="Movie Title">Movie Title</option>
+      </select>
+      <input type="text" class="btn" placeholder="Your Query..." name="query" ngModel required #query ="ngModel">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <span id="clear" class="btn btn-primary" (click)="clear()">Clear Filter</span>
+    </form>
+
+    <div *ngIf="reviews">
+      <h4>Reviews:</h4>
+      <ul>
+        <li *ngFor="let review of reviews" routerLink="/student/{{this.student}}/review/{{review.title}}">
+          <div class="review">
+            <img src={{review.poster}} alt="movie poster">
+            <div class="description">
+              <h6>{{review.title}}</h6>
+              <span>Rating: {{review.rating}}</span>
+              <span>Grade: {{review.grade}}</span>
+              <span>Date: {{review.date}}</span>
+            </div>
+          </div>
+
+        </li>
+      </ul>
+    </div>
+</div>

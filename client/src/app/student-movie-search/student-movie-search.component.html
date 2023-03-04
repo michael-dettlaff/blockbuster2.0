@@ -1,0 +1,65 @@
+<app-student-header></app-student-header>
+
+<div class="col-md-6 offset-md-3 mt-4" id="searchBar" style="margin-top: 80px !important;">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <label style="font-weight: 700; font-size: 1.1em;">Enter the Movie you Would Like to Search</label>
+      <div style="margin-top: 10px;">
+        <input class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" type="text" name="title" ngModel required #title ="ngModel">
+      </div>
+      <div class="text-center mb-3">
+        <button class="btn btn-primary" type="submit" [disabled]="f.invalid" style="margin-top: 20px; width: 20vw;">Search</button>
+    </div>
+    </form>
+</div>
+  
+<div *ngIf="movies">
+    
+    <div class="container" id="movieDisplay">
+      <h1>{{movies.Title}}</h1>
+      <div class="row">
+        <div class="col-lg-3 col-lg-3 col-md-3">
+          <img src={{movies.Poster}} alt="Movie Poster" class="img-fluid" style="border-style: solid; border-color: black;">
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-8" id="test">
+  
+          <div>
+            <label>IMDB Rating:</label>
+            <span>{{movies.imdbRating}}</span>
+          </div>
+          <div>
+            <label>Rated:</label>
+            <span>{{movies.Rated}}</span>
+          </div>
+          <div>
+            <label>Year:</label>
+            <span>{{movies.Year}}</span>
+          </div>
+          <div>
+            <label>Runtime:</label>
+            <span>{{movies.Runtime}}</span>
+          </div>
+          <div>
+            <label>Genre:</label>
+            <span>{{movies.Genre}}</span>
+          </div>
+          <div>
+            <label>Director:</label>
+            <span>{{movies.Director}}</span>
+          </div>
+          <div>
+            <label>Actors:</label>
+            <span>{{movies.Actors}}</span>
+          </div>
+          <div>
+            <label>Plot Summary:</label>
+            <span class="summary">{{movies.Plot}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="text-align: center; margin-top: 20px; margin-bottom: 25px;">
+        <a class="btn btn-primary btn-lg" (click)="review()">Rate & Review!</a>
+        <a class="btn btn-primary btn-lg" id="addList" (click)="addToList()">Add to Watchlist!</a>
+      </div>
+    </div>
+</div>
+

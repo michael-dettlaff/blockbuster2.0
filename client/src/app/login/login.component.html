@@ -1,0 +1,23 @@
+<div id="test" class="col-md-6 offset-md-3 mt-4">
+    <h1>Welcome to Blockbuster 2.0!</h1>
+    <h3>Login</h3>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="mb-3">
+        <input type="email" name="username" ngModel required #username ="ngModel" 
+                class="form-control" 
+                id="login-user" 
+                placeholder="Username">
+      </div>
+      <div class="mb-3">
+          <input type="password" name="password" ngModel required #password ="ngModel"
+                  class="form-control" 
+                  id="login-pass" 
+                  placeholder="Password">
+      </div>
+      <div class="text-center mb-3">
+        <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Login</button> 
+      </div>
+    </form>
+    <a routerLink="/createAccount" class="center">Looking to join a class?</a>
+</div>
+<img [src]="myGif" alt="minions-gif" class="center">

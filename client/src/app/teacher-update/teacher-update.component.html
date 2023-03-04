@@ -1,0 +1,77 @@
+<app-student-header></app-student-header>
+
+<div class="container">
+    <h2>Update Your Information</h2>
+    <div class="row">
+        <div class="col-lg-5 col-lg-5 col-md-5">
+            <h4>Change Your Email</h4>
+            <form #f="ngForm" (ngSubmit)="onSubmit(f, 'user')">
+                <label for="exampleInputEmail1" class="form-label">Your Username</label>
+                <input type="email" name="username" ngModel required #username ="ngModel" 
+                class="form-control" 
+                id="newUser-user" 
+                placeholder="username">
+
+                <label for="exampleInputEmail1" class="form-label">Your New Username</label>
+                <input type="email" name="newUsername" ngModel required #newUsername ="ngModel" 
+                class="form-control" 
+                id="newUser-newUser" 
+                placeholder="new username">
+
+                <label for="exampleInputEmail1" class="form-label">Confirm Your New Username</label>
+                <input type="email" name="confirmNewUsername" ngModel required #confirmNewUsername ="ngModel" 
+                class="form-control" 
+                id="newUser-confirmNewUser" 
+                placeholder="confirm new username">
+
+                <label for="exampleInputEmail1" class="form-label">Your Passord</label>
+                <input type="password" name="password" ngModel required #password ="ngModel" 
+                class="form-control" 
+                id="newUser-pass" 
+                placeholder="password">
+
+                <div class="text-center mb-3">
+                    <button type="submit" class="btn btn-primary" id="changeUser" [disabled]="f.invalid">Change Username</button> 
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-xl-2 col-lg-2 col-md-2">
+        </div>
+
+        <div class="col-xl-5 col-lg-5 col-md-5" id="newPassForm">
+            <h4>Change Your Password</h4>
+            <form #f2="ngForm" (ngSubmit)="onSubmit(f2, 'pass')">
+                <label for="exampleInputEmail1" class="form-label">Your Username</label>
+                <input type="email" name="username" ngModel required #username ="ngModel" 
+                class="form-control" 
+                id="newPass-user" 
+                placeholder="username">
+
+                <label for="exampleInputEmail1" class="form-label">Your Password</label>
+                <input type="password" name="password" ngModel required #password ="ngModel" 
+                class="form-control" 
+                id="newPass-pass" 
+                placeholder="password">
+
+                <label for="exampleInputEmail1" class="form-label">Your New Password</label>
+                <input type="password" name="newPassword" ngModel required #newPassword ="ngModel" 
+                class="form-control" 
+                id="newPass-newPass" 
+                placeholder="new password">
+
+                <label for="exampleInputEmail1" class="form-label">Confirm Your New Password</label>
+                <input type="password" name="confirmPassword" ngModel required #confirmPassword ="ngModel" 
+                class="form-control" 
+                id="newPass-confirmPass" 
+                placeholder="confirm new password">
+
+                <div class="text-center mb-3">
+                    <button type="submit" class="btn btn-primary" [disabled]="f2.invalid">Change Password</button> 
+                </div> 
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+div.container {
+    margin-top: 75px;
+}
+
+h2 {
+    text-align: center;
+}
+
+button {
+    width: 10vw;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+div.row {
+    margin-top: 20px;
+}
+
+h4 {
+    text-align: center;
+}
+
+button#changeUser {
+    width: 15vw;
+}
+
+button#becomeTeacher {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    width: 20vw;
+}

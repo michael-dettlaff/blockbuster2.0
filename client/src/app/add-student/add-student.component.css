@@ -1,0 +1,21 @@
+div#test {
+    margin-top: 75px !important;
+}
+
+button {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 20vw;
+}
+
+select {
+    border-style: solid;
+    border-color: rgb(226, 226, 226); 
+    background-color: rgb(233, 233, 233);
+    margin-left: 20px;
+}
+
+div#selectRole {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

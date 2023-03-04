@@ -1,0 +1,56 @@
+div.container {
+    margin-top: 75px;
+}
+
+span.rating {
+    display: block;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+#delete {
+    margin-top: 10px;
+    background-color: red;
+    border-color: red;
+    width: 20vw;
+}
+
+span#rate::before {
+    margin-right: 10px;
+    content: 'Rating:';
+}
+
+span#rate {
+    margin-top: 15px;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+span#grade::before{
+    margin-right: 10px;
+    content: 'Grade:';
+}
+
+span#grade {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+span#grade::before{
+    margin-right: 10px;
+    content: 'Grade:';
+}
+
+span#feedback {
+    font-size: 1.15em;
+}
+
+span#feedback::before{
+    margin-right: 10px;
+    font-size: 1.05em;
+    content: 'Feedback:';
+    font-weight: 700;
+}

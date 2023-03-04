@@ -1,0 +1,27 @@
+<app-teach-header></app-teach-header>
+
+  <div *ngIf="students" class="container">
+
+    <h2>Welcome Back, {{name.user}}</h2>
+    <h3>My Students:</h3>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Total Reviews</th>
+          <th>Reviews To Grade</th>
+        </tr>
+      </thead>
+
+      <tr class="students" *ngFor="let student of students" routerLink="/teacher/{{teacher}}/student/{{student.email}}">
+        <td>{{student.name}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.numReviews}}</td>
+        <td>{{student.reviewsUngraded}}</td>
+      </tr>
+
+    </table>
+
+  </div>

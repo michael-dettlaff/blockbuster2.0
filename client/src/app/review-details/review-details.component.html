@@ -1,0 +1,21 @@
+<app-teach-header></app-teach-header>
+<div class="container" >
+    <h2>Review: {{movie}}</h2>
+    <h4>By: {{name.user}}</h4>
+    <div *ngIf="review">
+        <span id="rate" class="rating">{{review.rating}}</span>
+        <p>{{review.review}}</p>
+        <span id="grade" class="rating">{{review.grade}}</span>
+        <span id="feedback" class="feedback">{{review.feedback}}</span>
+        <div class="grade">
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <label>Score:</label>
+                <input type="text" class="grade-input btn" name="grade" ngModel required #grade ="ngModel" placeholder="{{review.grade}}">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write Your Feedback Here!" name="feedback" ngModel required #feedback ="ngModel"></textarea>
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary" type="submit" [disabled]="f.invalid">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

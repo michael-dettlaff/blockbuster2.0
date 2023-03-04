@@ -1,0 +1,15 @@
+<app-student-header></app-student-header>
+
+<div class="container" >
+    <h2>Review: {{movie}}</h2>
+    <h4>By: {{name.user}}</h4>
+    <div *ngIf="review">
+        <span id="rate" class="rating">{{review.rating}}</span>
+        <p>{{review.review}}</p>
+        <span id="grade" class="rating">{{review.grade}}</span>
+        <span id="feedback" class="rating">{{review.feedback}}</span>
+    </div>
+    <div class="text-center mb-3">
+        <span id="delete" class="btn btn-primary" (click)="deleteReview()">Delete Review</span>
+    </div>
+</div>

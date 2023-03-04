@@ -1,0 +1,47 @@
+<app-teach-header></app-teach-header>
+<div id="test" class="col-md-6 offset-md-3 mt-4">
+    <h4>Add a student to your class, or add another teacher to the site!</h4>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div id="selectRole">
+            <label>Role:</label>
+            <select class="btn" name="roleSelect" [(ngModel)]="roleSelected" (ngModelChange)="onRoleSelected($event)">
+                <option value="Student">Student</option>
+                <option value="Teacher">Teacher</option>
+            </select>
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">User's First Name</label>
+            <input type="email" name="firstname" ngModel required #firstname ="ngModel" 
+                    class="form-control" 
+                    id="login-first" 
+                    placeholder="First Name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">User's Last Name</label>
+            <input type="email" name="lastname" ngModel required #lastname ="ngModel" 
+                    class="form-control" 
+                    id="login-las" 
+                    placeholder="Last Name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">User's Username</label>
+            <input type="email" name="username" ngModel required #username ="ngModel" 
+                class="form-control" 
+                id="login-user" 
+                placeholder="username">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">User's Password</label>
+            <input type="password" name="password" ngModel required #password ="ngModel"
+                  class="form-control" 
+                  id="login-pass" 
+                  placeholder="password">
+        </div>
+        <div class="text-center mb-3">
+            <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Add</button> 
+        </div> 
+    </form>
+</div>
+
+
